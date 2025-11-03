@@ -5,6 +5,8 @@ app.set('view engine', 'ejs');
 app.use('/users', userRouter);
 
 
+//MAKE YOUR OWN ROUTER FOR A FILE CALLED POSTS
+
 app.get('/', (req, res)=>{
     console.log('Here');
     res.render("index", {user: "Anthony"});
