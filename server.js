@@ -1,11 +1,11 @@
 const express = require('express');
 const userRouter = require ('./routes/users');
+const postRouter = require('./routes/posts');
 const app = express(); //Calling this function sets up a server
 app.set('view engine', 'ejs');
 app.use('/users', userRouter);
+app.use('/posts', postRouter);
 
-
-//MAKE YOUR OWN ROUTER FOR A FILE CALLED POSTS
 
 app.get('/', (req, res)=>{
     console.log('Here');
