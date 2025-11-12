@@ -21,6 +21,8 @@ router.post('/', (req, res) => {
 
 });
 
+const users = [{name: "Anthony"}];
+
 router.param("id", (req, res, next, id)=>{
     console.log(`Accessing user #${id}`);
     next();
