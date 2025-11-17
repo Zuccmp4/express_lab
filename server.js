@@ -12,9 +12,13 @@ app.use(express.urlencoded({extended: true}));
 
 app.get('/', (req, res)=>{
     console.log('Here');
-    res.render("index", {user: "Anthony",});
+    res.render("index", 
+        {user: "Anthony",});
 }); //This function will run when someone when someone goes to the root folder
 
+app.get('/new', (req, res) =>{
+    res.render('users/new', {firstName: "Please enter your name"});
+});
 
 
 app.listen(3030);
